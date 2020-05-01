@@ -1,0 +1,71 @@
+
+div{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.header_works{
+    font-size: 40px;
+
+}
+.card{
+    margin-top: 10px;
+    background: #fff;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.cardContent{
+    padding: 20px;
+
+}
+.cardCount{
+    margin-top: 10px;
+    background: #fff;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.cardContentCount{
+    padding: 20px;
+text-align: center
+}
+.cardTitleCount{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+.cardTitle{
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+.cardBody{
+    padding-top: 10px;
+    text-align: left;
+
+    font-size: 14px;
+}
+.cardTags{
+    background-color: rgba(00, 99, 240, 0.2);
+    font-size: 10px;
+    font-weight: bold;
+
+    padding: 5px;
+    border-radius: 5px;
+}
+.next{
+
+    margin-left: 70%;
+    width: 30px;
+    height:10px;
+}

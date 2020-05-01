@@ -1,0 +1,41 @@
+div{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header_works{
+    font-size: 40px;
+
+}
+.pcard{
+    margin: 15px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.pcardContent{
+
+
+}
+.pcardTitle{
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+.pcardBody{
+    padding-top: 10px;
+    text-align: left;
+
+    font-size: 14px;
+}
+.pcardTags{
+    background-color: rgba(00, 99, 240, 0.2);
+    font-size: 10px;
+    font-weight: bold;
+
+    padding: 5px;
+    border-radius: 5px;
+}
