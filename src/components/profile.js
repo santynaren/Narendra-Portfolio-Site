@@ -65,22 +65,23 @@ const profile = () => {
             </Grid>
           </Grid>
           <Grid container spacing={3} md={6} xs={12}>
+      <Grid item md={12} xs={12}>
+              <div class="pcard">
+                <div class="pcardContent">
+                <div class="pcardTitle">Green Man Gaming,UK (Remote)</div>
+                  <div class="pcardBody">2021 - Present | Frontend Engineer</div>
+                </div>
+              </div>
+            </Grid>
             <Grid item md={12} xs={12}>
               <div class="pcard">
                 <div class="pcardContent">
                   <div class="pcardTitle">IDC Group, USA (Remote)</div>
-                  <div class="pcardBody">2020 - Present | Senior Software Engineer</div>
+                  <div class="pcardBody">2020 - 2020 | Senior Software Engineer</div>
                 </div>
               </div>
             </Grid>
-            <Grid item md={12} xs={12}>
-              <div class="pcard">
-                <div class="pcardContent">
-                <div class="pcardTitle">VRSavvy Technologies</div>
-                  <div class="pcardBody">2017 - 2020 | Development Lead</div>
-                </div>
-              </div>
-            </Grid>
+          
           </Grid>
         </Grid>
       </div>
