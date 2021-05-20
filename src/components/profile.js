@@ -77,7 +77,7 @@ const profile = () => {
               <div class="pcard">
                 <div class="pcardContent">
                   <div class="pcardTitle">IDC Group, USA (Remote)</div>
-                  <div class="pcardBody">2020 - 2020 | Senior Software Engineer</div>
+                  <div class="pcardBody">2020 - 2021 | Senior Software Engineer</div>
                 </div>
               </div>
             </Grid>
