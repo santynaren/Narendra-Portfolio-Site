@@ -68,16 +68,16 @@ const profile = () => {
       <Grid item md={12} xs={12}>
               <div class="pcard">
                 <div class="pcardContent">
-                <div class="pcardTitle">Green Man Gaming,UK (Remote)</div>
-                  <div class="pcardBody">2021 - Present | Frontend Engineer</div>
+                <div class="pcardTitle">Arive, Berlin</div>
+                  <div class="pcardBody">2022 - Present | Senior Frontend Engineer</div>
                 </div>
               </div>
             </Grid>
             <Grid item md={12} xs={12}>
               <div class="pcard">
                 <div class="pcardContent">
-                  <div class="pcardTitle">IDC Group, USA (Remote)</div>
-                  <div class="pcardBody">2020 - 2021 | Senior Software Engineer</div>
+                  <div class="pcardTitle">Green Man Gaming,UK (Remote)</div>
+                  <div class="pcardBody">2021 - 2022 | Frontend Engineer</div>
                 </div>
               </div>
             </Grid>
