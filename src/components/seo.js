@@ -5,27 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -37,15 +22,17 @@ function SEO({ description, lang, meta, title }) {
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content:
+            'Narendra Santhosh Nagarajan (NaSa) is a software engineer and product enthusiast with a passion for building innovative solutions. Explore his portfolio to see his work and contributions.',
         },
         {
           property: `og:title`,
-          content: title,
+          content: 'Product Engineer | Narendra Santhosh Nagarajan (NaSa)',
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content:
+            'Narendra Santhosh Nagarajan (NaSa) is a software engineer and product enthusiast with a passion for building innovative solutions. Explore his portfolio to see his work and contributions.',
         },
         {
           property: `og:type`,
@@ -57,32 +44,33 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: '@explorenaren',
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: 'Product Engineer | Narendra Santhosh Nagarajan (NaSa)',
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content:
+            'Narendra Santhosh Nagarajan (NaSa) is a software engineer and product enthusiast with a passion for building innovative solutions. Explore his portfolio to see his work and contributions.',
         },
       ].concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../src/components/layout';
+import SEO from '../src/components/seo';
 import '../assets/css/blog-landing.css';
 
 const BlogPost = ({ data, pageContext }) => {

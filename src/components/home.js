@@ -9,14 +9,17 @@ import {
   FaGitlab,
   FaTwitter,
   FaProductHunt,
+  FaCalendar,
+  FaLink,
+  FaMailBulk,
+  FaLocationArrow,
 } from 'react-icons/fa';
-import { FiCalendar, FiLink, FiMail } from 'react-icons/fi';
 
 const home = () => {
   const iconStyle = { width: 24, height: 24, marginRight: 12 };
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="Narendra Santhosh N | Product Engineer | Melbourne, Australia" />
       <div className="minimal-container">
         {/* Header - Name and Contact */}
         <div className="header-section">
@@ -42,13 +45,13 @@ const home = () => {
             <FaProductHunt style={iconStyle} />
           </a>
           <a href="mailto:santhoshnarendra@gmail.com" aria-label="Email">
-            <FiMail style={iconStyle} />
+            <FaMailBulk style={iconStyle} />
           </a>
           {/* <a href="mailto:santhoshnarendra@gmail.com" aria-label="Email">
             <FiDownload style={iconStyle} />
           </a> */}
           <a href="https://linktr.ee/narendra_santhosh" aria-label="Email">
-            <FiLink style={iconStyle} />
+            <FaLink style={iconStyle} />
           </a>
           {/* <a href="mailto:santhoshnarendra@gmail.com" aria-label="Email">
             <FiGrid style={iconStyle} />
@@ -56,7 +59,10 @@ const home = () => {
           <a
             href="https://calendar.app.google/3iKZ8dvqsuC6PXD66"
             aria-label="Email">
-            <FiCalendar style={iconStyle} />
+            <FaCalendar style={iconStyle} />
+          </a>
+          <a href="" aria-label="Email">
+            <FaLocationArrow style={iconStyle} /> Melbourne, Australia
           </a>
         </div>
         <br />

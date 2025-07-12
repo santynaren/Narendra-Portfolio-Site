@@ -11,8 +11,8 @@ import {
 } from '@mui/material';
 import { ArrowBack } from '@mui/icons-material';
 import { graphql, navigate } from 'gatsby';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../src/components/layout';
+import SEO from '../src/components/seo';
 
 export default function WorkExplainPage({ data }) {
   const works = data.markdownRemark;

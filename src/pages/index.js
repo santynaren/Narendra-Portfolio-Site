@@ -1,13 +1,5 @@
-import React from 'react';
-
-import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Home from '../components/home';
-import Work from '../components/works';
-import Profile from '../components/profile';
-import Awards from '../components/awards';
-
-import Grid from '@mui/material/Grid';
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -28,24 +20,5 @@ const IndexPage = ({ data }) => (
     <Awards /> */}
   </Layout>
 );
-export const worksQuery = graphql`
-  query workDoneQuery {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/src/content/worksDone/" } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            path
-            title
-            tags
-            short
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
+
 export default IndexPage;
