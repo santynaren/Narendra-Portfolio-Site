@@ -2,7 +2,6 @@ import React from 'react';
 import SEO from '../components/seo';
 import { Link } from 'gatsby';
 import '../assets/css/home.css';
-import { graphql } from 'gatsby';
 import {
   FaLinkedin,
   FaGithub,

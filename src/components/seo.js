@@ -10,15 +10,13 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 function SEO({ description, lang, meta, title }) {
-  const metaDescription = description || site.siteMetadata.description;
-
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={'%s | Narendra Santhosh Nagarajan (NaSa)'}
       meta={[
         {
           name: `description`,
