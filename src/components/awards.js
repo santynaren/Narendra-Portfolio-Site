@@ -1,13 +1,14 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import '../assets/css/awards.css';
+import Grid from '@mui/material/Grid';
+import '../assets/css/home.css';
+import { Link } from 'gatsby';
 const awards = () => {
   // Last Section with two components
   // one : Awards of 3 col-4
   // two : Number tally 6 col-2
   return (
     <>
-      <div>
+      {/* <div>
         <Grid container spacing={3}>
           <Grid item md={4} xs={12}>
             <div class="acard">
@@ -96,7 +97,32 @@ const awards = () => {
             </div>
           </Grid>
         </Grid>
-      </div>
+      </div> */}
+      <section
+        className="contact-cta"
+        style={{
+          marginTop: '50px',
+        }}>
+        <div className="container">
+          <div className="cta-content">
+            <h2>Let's Build Something Amazing Together</h2>
+            <p>
+              Have a project in mind? Let's discuss how we can bring your ideas
+              to life.
+            </p>
+            <div className="cta-buttons">
+              <a
+                href="mailto:your.email@example.com"
+                className="btn btn-primary">
+                Get In Touch
+              </a>
+              <Link to="/contact" className="btn btn-secondary">
+                Contact Form
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

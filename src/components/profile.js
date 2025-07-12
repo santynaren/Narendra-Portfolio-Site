@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
 import '../assets/css/profile.css';
 import fblogo from '../images/fb.png';
@@ -65,25 +65,30 @@ const profile = () => {
             </Grid>
           </Grid>
           <Grid container spacing={3} md={6} xs={12}>
-      <Grid item md={12} xs={12}>
-        <a href="https://github.com/santynaren/Narendra-Portfolio-Site/blob/master/Narendra%20Santhosh%20CV.pdf" download="Narendra Senior FE Engineer">
-              <div class="pcard">
-                <div class="pcardContent">
-                <div class="pcardTitle">Resume</div>
-                  <div class="pcardBody">5+ years Experience in Application Development</div>
+            <Grid item md={12} xs={12}>
+              <a
+                href="https://github.com/santynaren/Narendra-Portfolio-Site/blob/master/Narendra%20Santhosh%20CV.pdf"
+                download="Narendra Senior FE Engineer">
+                <div class="pcard">
+                  <div class="pcardContent">
+                    <div class="pcardTitle">Resume</div>
+                    <div class="pcardBody">
+                      5+ years Experience in Application Development
+                    </div>
+                  </div>
                 </div>
-              </div>
-</a>
+              </a>
             </Grid>
             <Grid item md={12} xs={12}>
               <div class="pcard">
                 <div class="pcardContent">
                   <div class="pcardTitle">Arive,Berlin</div>
-                  <div class="pcardBody">2022 - Present | Senior Frontend Engineer</div>
+                  <div class="pcardBody">
+                    2022 - Present | Senior Frontend Engineer
+                  </div>
                 </div>
               </div>
             </Grid>
-          
           </Grid>
         </Grid>
       </div>

@@ -1,71 +1,439 @@
+/* Modern Work Component Styles */
 
-div{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+.work-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.header_works{
-    font-size: 40px;
 
+.work-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
-.card{
-    margin-top: 10px;
-    background: #fff;
-    width: 100%;
-    height: 200px;
-    border-radius: 5px;
 
-
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+.work-card:hover::before {
+  opacity: 1;
 }
-.cardContent{
-    padding: 20px;
 
+.work-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(102, 126, 234, 0.25);
 }
-.cardCount{
-    margin-top: 10px;
-    background: #fff;
-    width: 100%;
-    height: 100px;
-    border-radius: 5px;
 
-
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+/* Featured Work Card */
+.work-card.featured {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
 }
-.cardContentCount{
-    padding: 20px;
-text-align: center
-}
-.cardTitleCount{
-    text-align: center;
-    font-weight: bold;
-    font-size: 24px;
 
+.work-card.featured .work-title {
+  color: white;
 }
-.cardTitle{
-    text-align: left;
-    font-weight: bold;
-    font-size: 24px;
 
+.work-card.featured .work-body p {
+  color: rgba(255, 255, 255, 0.9);
 }
-.cardBody{
-    padding-top: 10px;
-    text-align: left;
 
-    font-size: 14px;
+.work-card.featured .work-category {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
-.cardTags{
-    background-color: rgba(00, 99, 240, 0.2);
-    font-size: 10px;
-    font-weight: bold;
 
-    padding: 5px;
-    border-radius: 5px;
+/* Work Image */
+.work-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
-.next{
 
-    margin-left: 70%;
-    width: 30px;
-    height:10px;
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.work-card:hover .work-image img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.9),
+    rgba(118, 75, 162, 0.9)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.work-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.overlay-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.overlay-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Work Card Content */
+.work-card-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-header {
+  margin-bottom: 1.5rem;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.work-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.work-category {
+  display: inline-block;
+
+  color: #667eea;
+  border-radius: 12px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.in-progress {
+  background: rgba(255, 193, 7, 0.2);
+  color: #856404;
+}
+
+.status-badge.planning {
+  background: rgba(108, 117, 125, 0.2);
+  color: #495057;
+}
+
+.work-body {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.work-body p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 2px 4px;
+  border-radius: 50px;
+  font-size: 0.5rem;
+  font-weight: 600;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+/* 
+.tech-tag:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+} */
+
+.work-card.featured .tech-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Action Buttons */
+.work-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+} */
+
+.btn-secondary {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-demo {
+  background: #28a745;
+  color: white;
+}
+
+.btn-demo:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.work-card.featured .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.work-card.featured .btn-secondary:hover {
+  /* background: rgba(255, 255, 255, 0.2); */
+  backdrop-filter: blur(10px);
+}
+
+/* Hover Overlay Effect */
+.work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.95),
+    rgba(118, 75, 162, 0.95)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  padding: 2rem;
+  text-align: center;
+}
+
+.work-card:hover .work-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-content {
+  color: white;
+}
+
+.overlay-content h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.overlay-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Status Indicators */
+.work-card.in-progress::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffc107;
+  animation: pulse 2s infinite;
+}
+
+.work-card.completed::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #28a745;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+  }
+}
+
+/* Legacy Support for existing card classes */
+.card {
+  @extend .work-card;
+}
+
+.cardContent {
+  @extend .work-card-content;
+}
+
+.cardTitle {
+  @extend .work-title;
+}
+
+.cardBody {
+  @extend .work-body;
+}
+
+.cardTags {
+  @extend .tech-tag;
+}
+
+.next {
+  @extend .work-actions;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .work-card-content {
+    padding: 1.5rem;
+  }
+
+  .work-title {
+    font-size: 1.3rem;
+  }
+
+  .work-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-demo {
+    justify-content: center;
+  }
+
+  .work-image {
+    height: 150px;
+  }
+
+  .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-card-content {
+    padding: 1rem;
+  }
+
+  .work-title {
+    font-size: 1.2rem;
+  }
+
+  .tech-stack {
+    gap: 6px;
+  }
+
+  .tech-tag {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
 }

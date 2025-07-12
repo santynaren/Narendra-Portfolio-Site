@@ -1,6 +1,6 @@
 ---
 path: "/fam/"
-tags: "WebApp"
+tags: ["WebApp"]
 title : "Auditing App "
 short : "Application for Fixed Asset Management "
 img : "https://raw.githubusercontent.com/santynaren/ProfileWebsite/master/fam.png"

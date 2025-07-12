@@ -1,6 +1,6 @@
 ---
 title: 'The Future of AI Development: 2025 Trends Shaping the Industry'
-date: '2025-06-25'
+date: '2025-03-25'
 description: 'Exploring the latest trends in AI development including multimodal models, edge computing, and the rise of specialized AI agents'
 category: 'AI Development'
 tags: ['AI', 'Machine Learning', 'Technology Trends', '2025']

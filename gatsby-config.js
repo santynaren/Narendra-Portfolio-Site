@@ -4,7 +4,7 @@ module.exports = {
     title: `Narendra's Portfolio & Blog`,
     description: `Portfolio and blog showcasing AI development, MCP servers & clients, and modern web technologies`,
     author: `Narendra`,
-    siteUrl: `https://your-site-url.com`, // Replace with your actual URL
+    siteUrl: `https://santynaren.netlify.app`, // Replace with your actual URL
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,15 +12,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `blog`,
+        path: `${__dirname}/src/content/blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/content/blog`,
+        name: `pages`,
+        path: `${__dirname}/src/content/worksDone`,
       },
     },
     {
@@ -65,8 +65,6 @@ module.exports = {
         name: `Narendra Portfolio & Blog`,
         short_name: `Narendra`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // Update with your icon
       },
@@ -141,7 +139,7 @@ module.exports = {
             }
             allSitePage {
               nodes {
-                path
+                
               }
             }
           }

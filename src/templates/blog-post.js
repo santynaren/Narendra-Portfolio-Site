@@ -1,12 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import "../assets/css/blog-landing.css"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import '../assets/css/blog-landing.css';
 
 const BlogPost = ({ data, pageContext }) => {
-  const post = data.markdownRemark
-  const { previous, next } = pageContext
+  const post = data.markdownRemark;
+  const { previous, next } = pageContext;
 
   return (
     <Layout>
@@ -19,11 +19,13 @@ const BlogPost = ({ data, pageContext }) => {
           <h1 className="blog-post-title">{post.frontmatter.title}</h1>
           <div className="blog-post-meta">
             <span className="blog-post-date">{post.frontmatter.date}</span>
-            <span className="blog-post-category">{post.frontmatter.category}</span>
+            <span className="blog-post-category">
+              {post.frontmatter.category}
+            </span>
           </div>
           {post.frontmatter.tags && (
             <div className="blog-post-tags">
-              {post.frontmatter.tags.map(tag => (
+              {post.frontmatter.tags.map((tag) => (
                 <span key={tag} className="blog-post-tag">
                   {tag}
                 </span>
@@ -31,7 +33,7 @@ const BlogPost = ({ data, pageContext }) => {
             </div>
           )}
         </header>
-        
+
         <section
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -43,11 +45,11 @@ const BlogPost = ({ data, pageContext }) => {
               ← {previous.frontmatter.title}
             </Link>
           )}
-          
+
           <Link to="/blog" className="nav-link">
             All Posts
           </Link>
-          
+
           {next && (
             <Link to={`/blog${next.fields.slug}`} className="nav-link next">
               {next.frontmatter.title} →
@@ -56,10 +58,10 @@ const BlogPost = ({ data, pageContext }) => {
         </nav>
       </article>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -76,4 +78,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

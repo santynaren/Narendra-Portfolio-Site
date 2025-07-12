@@ -1,6 +1,6 @@
 ---
-path: "/geoTechnical/"
-tags: "ElectronJs"
+path: "/geo-technical/"
+tags: ["ElectronJs"]
 title : "vSoil Suite "
 short: "Desktop  Applicaiton | Long Term Project"
 img : "https://raw.githubusercontent.com/santynaren/ProfileWebsite/master/vsoil%20suite.png"

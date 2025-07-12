@@ -1,6 +1,6 @@
 ---
 path: "/pedaleze/"
-tags: "Android"
+tags: ["Android"]
 title : "Pedaleze "
 short : "Application for Mobility Solution"
 img : "https://raw.githubusercontent.com/santynaren/ProfileWebsite/master/pedalexe.png"

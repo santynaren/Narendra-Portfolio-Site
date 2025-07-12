@@ -1,6 +1,6 @@
 ---
 path: "/expense/"
-tags: "React"
+tags: ["React"]
 title : "Expense Tracker "
 short : "Utility Application "
 img : "https://raw.githubusercontent.com/santynaren/ProfileWebsite/master/expense.png"
