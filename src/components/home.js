@@ -11,7 +11,6 @@ import {
   FaCalendar,
   FaLink,
   FaMailBulk,
-  FaLocationArrow,
 } from 'react-icons/fa';
 
 const home = () => {
@@ -60,9 +59,6 @@ const home = () => {
             aria-label="Email">
             <FaCalendar style={iconStyle} />
           </a>
-          <a href="" aria-label="Email">
-            <FaLocationArrow style={iconStyle} /> Melbourne, Australia
-          </a>
         </div>
         <br />
         <hr />
@@ -70,9 +66,10 @@ const home = () => {
         {/* Bio */}
         <div className="bio-section">
           <p>
-            I am a Product Engineer with a passion to work on technologies.
-            Specialized in developing frontend and backend scalable application,
-            now hammering a logistics software at TIG Freight with my expertise
+            I am a Product Engineer with Software Development background, based
+            in Melbourne. Specialized in developing frontend and backend
+            scalable application, now hammering a logistics software at TIG
+            Freight with my expertise
           </p>
           <p>
             Being across many domains, I have started to pen my career
