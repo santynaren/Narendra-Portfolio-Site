@@ -239,25 +239,4 @@ const home = () => {
   );
 };
 
-export const worksQuery = graphql`
-  query workDoneQuery {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/src/content/worksDone/" } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            path
-            title
-            tags
-            short
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
-
 export default home;
