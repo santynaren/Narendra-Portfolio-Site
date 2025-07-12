@@ -155,7 +155,7 @@ const home = () => {
 
           <div className="work-item">
             <Link to="" className="work-link">
-              Gist (Under Development)
+              my2Cents (Under Development)
             </Link>
             <div className="work-description">
               Make Writing fun, for those who hate to write
