@@ -9,54 +9,54 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/src/content/blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/content/worksDone`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              quality: 90,
-              linkImagesToOriginal: false,
-            },
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: true,
-              noInlineHighlight: false,
-            },
-          },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-          {
-            resolve: `gatsby-remark-external-links`,
-            options: {
-              target: `_blank`,
-              rel: `nofollow noopener noreferrer`,
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `blog`,
+    //     path: `${__dirname}/src/content/blog`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `pages`,
+    //     path: `${__dirname}/src/content/worksDone`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           maxWidth: 800,
+    //           quality: 90,
+    //           linkImagesToOriginal: false,
+    //         },
+    //       },
+    //       {
+    //         resolve: `gatsby-remark-prismjs`,
+    //         options: {
+    //           classPrefix: 'language-',
+    //           inlineCodeMarker: null,
+    //           aliases: {},
+    //           showLineNumbers: true,
+    //           noInlineHighlight: false,
+    //         },
+    //       },
+    //       `gatsby-remark-copy-linked-files`,
+    //       `gatsby-remark-smartypants`,
+    //       {
+    //         resolve: `gatsby-remark-external-links`,
+    //         options: {
+    //           target: `_blank`,
+    //           rel: `nofollow noopener noreferrer`,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -71,91 +71,91 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     // Add blog-specific plugins
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map((edge) => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url:
-                    site.siteMetadata.siteUrl + `/blog` + edge.node.fields.slug,
-                  guid:
-                    site.siteMetadata.siteUrl + `/blog` + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
-                });
-              });
-            },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { type: { eq: "blog" } } }
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: "Narendra's Blog RSS Feed",
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              nodes {
-                
-              }
-            }
-          }
-        `,
-        resolveSiteUrl: ({ site, allSitePage }) => {
-          return site.siteMetadata.siteUrl;
-        },
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes.map((node) => {
-            return {
-              url: `${site.siteMetadata.siteUrl}${node.path}`,
-              changefreq: `daily`,
-              priority: 0.7,
-            };
-          }),
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-feed`,
+    //   options: {
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             title
+    //             description
+    //             siteUrl
+    //             site_url: siteUrl
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     feeds: [
+    //       {
+    //         serialize: ({ query: { site, allMarkdownRemark } }) => {
+    //           return allMarkdownRemark.edges.map((edge) => {
+    //             return Object.assign({}, edge.node.frontmatter, {
+    //               description: edge.node.excerpt,
+    //               date: edge.node.frontmatter.date,
+    //               url:
+    //                 site.siteMetadata.siteUrl + `/blog` + edge.node.fields.slug,
+    //               guid:
+    //                 site.siteMetadata.siteUrl + `/blog` + edge.node.fields.slug,
+    //               custom_elements: [{ 'content:encoded': edge.node.html }],
+    //             });
+    //           });
+    //         },
+    //         query: `
+    //           {
+    //             allMarkdownRemark(
+    //               sort: { order: DESC, fields: [frontmatter___date] },
+    //               filter: { frontmatter: { type: { eq: "blog" } } }
+    //             ) {
+    //               edges {
+    //                 node {
+    //                   excerpt
+    //                   html
+    //                   fields { slug }
+    //                   frontmatter {
+    //                     title
+    //                     date
+    //                   }
+    //                 }
+    //               }
+    //             }
+    //           }
+    //         `,
+    //         output: '/rss.xml',
+    //         title: "Narendra's Blog RSS Feed",
+    //       },
+    //     ],
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-sitemap`,
+    //   options: {
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             siteUrl
+    //           }
+    //         }
+    //         allSitePage {
+    //           nodes {
+
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     resolveSiteUrl: ({ site, allSitePage }) => {
+    //       return site.siteMetadata.siteUrl;
+    //     },
+    //     serialize: ({ site, allSitePage }) =>
+    //       allSitePage.nodes.map((node) => {
+    //         return {
+    //           url: `${site.siteMetadata.siteUrl}${node.path}`,
+    //           changefreq: `daily`,
+    //           priority: 0.7,
+    //         };
+    //       }),
+    //   },
+    // },
   ],
 };
